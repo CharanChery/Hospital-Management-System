@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f8f8; margin: 20px; }
+        .dashboard { display: flex; justify-content: space-between; margin-bottom: 20px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 23%; }
+        .charts { display: flex; flex-direction: column; }
+        canvas { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body>
+    <h2>Dashboard</h2>
+    <div class="dashboard">
+        <div class="card"><h3>Number Of Live Hospitals</h3><p><strong>872</strong></p></div>
+        <div class="card"><h3>Online Appointments Taken Today</h3><p><strong>928</strong></p></div>
+        <div class="card"><h3>Total Teleconsultation</h3><p><strong>94398</strong></p></div>
+        <div class="card"><h3>Total Online Appointments</h3><p><strong>11,144,075</strong></p></div>
+    </div>
+    
+    <div class="charts">
+        <canvas id="hourlyChart" width="800" height="300"></canvas>
+        <canvas id="dailyChart" width="800" height="300"></canvas>
+    </div>
+    
+    <script>
+        const hourlyCtx = document.getElementById('hourlyChart').getContext('2d');
+        new Chart(hourlyCtx, {
+            type: 'line',
+            data: {
+                labels: ['0 Hours', '1 Hours', '2 Hours', '3 Hours', '4 Hours', '5 Hours', '6 Hours', '7 Hours', '8 Hours'],
+                datasets: [{
+                    label: 'Total Appointments',
+                    data: [300, 400, 450, 480, 500, 550, 650, 800, 950],
+                    borderColor: 'cyan',
+                    backgroundColor: 'cyan',
+                    fill: false,
+                    tension: 0.4,
+                    pointRadius: 5,
+                }]
+            }
+        });
+
+        const dailyCtx = document.getElementById('dailyChart').getContext('2d');
+        new Chart(dailyCtx, {
+            type: 'bar',
+            data: {
+                labels: ['11/03', '12/03', '13/03', '14/03', '15/03', '16/03', '17/03', '18/03', '19/03', '20/03', '21/03', '22/03', '23/03', '24/03', '25/03', '26/03', '27/03', '28/03', '29/03', '30/03'],
+                datasets: [{
+                    label: 'Appointments Booked',
+                    data: [4200, 4300, 2900, 2600, 4000, 5100, 6200, 6100, 5300, 5700, 4600, 3900, 5000, 5800, 4500, 5500, 4700, 3900, 3200, 3000],
+                    backgroundColor: ['#FFCCCC', '#FFD699', '#FFFFCC', '#CCFFFF', '#99CCFF', '#CCCCFF', '#FF99CC', '#FFCC99'],
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
