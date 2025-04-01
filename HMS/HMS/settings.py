@@ -38,7 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles','dashboard',
+<<<<<<< HEAD
+    
+=======
+    'django.contrib.staticfiles',
+    'blooddashboard',
+    'Doctor',
+>>>>>>> c4a5db5d101bdac46362f27253eb5f2120b67022
 
 ]
 
@@ -119,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIR = STATIC_DIR
+STATICFILES_DIRS = STATIC_DIR
 MEDIA_URL = 'media/'
 
 # Default primary key field type
