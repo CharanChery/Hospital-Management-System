@@ -18,7 +18,7 @@
         <h1>Doctor Panel</h1>
         <ul>
           <li>
-            <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="{% url 'Doctor:doctordashboard' %}"><i class="fas fa-home"></i> Dashboard</a>
           </li>
           <li>
             <a href="#"><i class="fas fa-calendar-check"></i> Appointments</a>
@@ -29,6 +29,11 @@
           <li>
             <a href="#"
               ><i class="fas fa-prescription-bottle"></i> Prescriptions</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'Doctor:EditAvail' %}"
+              ><i class="fa-regular fa-calendar-days"></i> Edit Your Availability</a
             >
           </li>
           <li>
@@ -69,6 +74,7 @@
                 <th>Patient Name</th>
                 <th>Time</th>
                 <th>Condition</th>
+                <th>Meet Link</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -77,12 +83,26 @@
                 <td>Amit Sharma</td>
                 <td>10:30 AM</td>
                 <td>Fever</td>
+                <td>
+                  <a
+                    href="https://meet.jit.si/AmitSharma-1030AM"
+                    target="_blank"
+                    ><button class="btn">Join</button></a
+                  >
+                </td>
                 <td><button class="btn">View</button></td>
               </tr>
               <tr>
                 <td>Priya Singh</td>
                 <td>11:00 AM</td>
                 <td>Diabetes</td>
+                <td>
+                  <a
+                    href="https://meet.google.com/example-link2"
+                    target="_blank"
+                    ><button class="btn">Join</button></a
+                  >
+                </td>
                 <td><button class="btn">View</button></td>
               </tr>
             </tbody>

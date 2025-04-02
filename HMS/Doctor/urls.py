@@ -6,4 +6,5 @@ app_name = 'Doctor'
 
 urlpatterns = [
     path('',Maindashboard,name='doctordashboard'),
+    path('editavailability/', EditAvail, name='EditAvail')
 ]

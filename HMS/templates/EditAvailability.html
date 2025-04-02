@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Availability Form</title>
+</head>
+<body>
+    <section class="doctor-availability">
+        <h2>Doctor Availability</h2>
+        <div class="availability">
+          <h3>Available Days</h3>
+          <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ forms }}
+            <input type="submit" value="Edit availability">
+          </form>
+          
+          <button class="btn">Edit Availability</button> <!-- Optional button for editing -->
+        </div>
+      </section>
+      
+</body>
+</html>
