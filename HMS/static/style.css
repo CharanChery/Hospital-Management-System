@@ -1,0 +1,53 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    background: #f6f6f6;
+}
+
+/* Summary Cards Container */
+.summary-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 22%;
+    min-width: 200px;
+    text-align: center;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Colors for Different Cards */
+.card-yellow { color: #ffcc00; }
+.card-orange { color: #ff6600; }
+.card-green { color: #33cc33; }
+.card-blue { color: #00cccc; }
+
+/* Graphs Section */
+.graph-container {
+    width: 95%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+}
